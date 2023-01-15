@@ -1,11 +1,7 @@
-# Anabolic Smorgasbord
+# College Rizz Calculator
 
-A high protein and low fat cheat meal alternative to help with dieting!
+A calculator to to determine interest rates from loans for colleges and simple compound interest
 
-**Link to project:** https://cheat-meals-blog-network.herokuapp.com/
-
-
-<img src="https://media.giphy.com/media/8kToMEoYx5hpX5lcY4/giphy.gif" />
 
 
 ## How It's Made:
