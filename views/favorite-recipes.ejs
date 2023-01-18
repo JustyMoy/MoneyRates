@@ -1,32 +1,54 @@
-<%- include('partials/logged-in-header') -%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compound Interest Calculator</title>
+    <link rel="stylesheet" href="main.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
+</head>
+<body>
+    <section class="container">
+        <div class="calculator">
+            <div class="heading">
+              <button> <a href="/feed" class="btn btn-outline-primary">Return to Feed</a> </button>
 
-<div class="container card-container">
-  <h1>My Bookmarked Recipes</h1>
-  <% console.log(posts[0]) %> 
-  <div class="row row-cols-1 row-cols-md-3 g-4">
-    <% for(let i=0; i<posts.length; i++) {%>
-      <%if(posts[i].bookmarks.includes(user.id)) {%>
-      <!--if post[i] has bookmark includes user.id then generate saved post-->
-    <div class="col">
-      <div class="card h-100">
-        <img src="<%= posts[i].image%>" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title"><%= posts[i].title%></h5>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          <a href="/post/<%= posts[i]._id%>" class="btn btn-primary">View Recipe</a>
-          <!-- <a href="/post/<%= posts[i]._id%>" class="btn btn-primary">Edit</a> -->
+                <h3>Compound Interest Calculator</h3>
+                <small>Your money growth over time using compound interest...</small>
+            </div>
+            <form class="compound-form">
+                <div class="input-group">
+                    <label for="initialamount">Initial Amount</label>
+                    <input type="number" id="initialamount" />
+                </div>
+                <div class="input-group">
+                    <label for="years">Investment Years</label>
+                    <input type="number" id="years" />
+                </div>
+                <div class="input-group">
+                    <label for="rates">Estimated Rates(%)</label>
+                    <input type="number" id="rates" />
+                </div>
+                <div class="input-group">
+                    <label for="rates">Compound Interval</label>
+                    <select id="compound">
+                        <option value="1">Annualy</option>
+                        <option value="4">Quartely</option>
+                        <option value="2">Semiannualy</option>
+                        <option value="12">Monthly</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <button>Calculate</button>
+                </div>
+            </form>
         </div>
-        <div class="card-footer">
-          <span class="badge rounded-pill bg-primary"><%= posts[i].country%></span>
-          <span class="badge rounded-pill bg-secondary"><%= posts[i].dish%></span>
+        <div class="results">
+            <h3 id="message"></h3>
+            <canvas id="data-set"></canvas>
         </div>
-      </div>
-    </div>
-    <% } %>
-    <% } %>
-  </div>
-  
-</div>
-
-
-<%- include('partials/footer') -%>
+    </section>
+    <script src="appp.js"></script>
+</body>
+</html>

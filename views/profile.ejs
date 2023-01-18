@@ -8,47 +8,40 @@
               <!-- <a href="/logout" class="col-3 btn btn-primary">Logout</a> -->
           <!-- </div> --> 
           <div class="mt-5">
-            <h2>Add a recipe</h2>
+            <h2>Add a money estimate</h2>
             <form action="/post/createPost" enctype="multipart/form-data" method="POST">
               <div class="mb-3">
-                  <label for="title" class="form-label">Recipe Title</label>
+                  <label for="title" class="form-label">Money Amount</label>
                   <input type="text" class="form-control" id="title" name="title">
               </div>
               <div class="mb-3">
-              <label for="country" class="form-label">What type of protein used</label>
+              <label for="country" class="form-label">What type of rate</label>
               <select class="form-select" aria-label="Default select example" id="country" name="country">
-                <option selected>Select protein brand used</option>
-                <option value="MP ">Myprotein</option>
-                <option value="OP ">Opitimum nutrition</option>
-                <option value="PE ">PEScience</option>
-                <option value="CB ">Combat</option>
-                <option value="CK ">Chicken</option>
-                <option value="BF ">Beef</option>
-                <option value="PK ">Pork</option>
-                <option value="SH ">Shrimp</option>
-                <option value="TF ">Tofu</option>
-                <option value="O">other</option>
+                <option selected>Select rate used</option>
+                <option value="CP ">Compound Interest</option>
+                <option value="LN ">Loan</option>
+                <option value="TX ">Taxes</option>
+
 
               </select>
               </div>
               <div class="mb-3">
-                <label for="basic-url" class="form-label">Dish Type</label>
+                <label for="basic-url" class="form-label">Loan Type</label>
                 <select class="form-select" aria-label="Default select example" id="dish" name="dish">
                   <option selected>Please Select</option>
-                  <option value="Main Dish">Main Dish</option>
-                  <option value="Side Dish">Side Dish</option>
-                  <option value="Snack">Snack</option>
-                  <option value="Dessert">Dessert</option>
-                  <option value="Drink">Drink</option>
+                  <option value="short">Short</option>
+                  <option value="med">Medium</option>
+                  <option value="long">Long</option>
+
                 </select>
                 </div>
               <div class="mb-3">
-                <label for="caption" class="form-label">Macros (Calories, Fats, Carbs, Protein)</label>
+                <label for="caption" class="form-label">Number of Payments</label>
                 <textarea class="form-control" id="caption" name="caption" placeholder="Place each macro on its own line."></textarea>
               </div>
               <div class="mb-3">
-                <label for="ingredients" class="form-label">Ingredients</label>
-                <textarea class="form-control" id="ingredients" name="ingredients" placeholder="Place each ingredient on its own line." rows="5"></textarea>
+                <label for="ingredients" class="form-label">Payment Timeline</label>
+                <textarea class="form-control" id="ingredients" name="ingredients" placeholder="Place each month on its own line." rows="5"></textarea>
               </div>
               <div class="mb-3">
                 <label for="directions" class="form-label">Directions</label>
