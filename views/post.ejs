@@ -143,14 +143,14 @@
         </div>
       </div>
       <div class="col-md-6">
-        <h3 class="display-4">Recipe</h3>
-        <h2>Ingredients</h2> <hr class="style1">
+        <h3 class="display-4">Money Amount</h3>
+        <h2>Duration of Custom Rate</h2> <hr class="style1">
         <ul class="list-unstyled">
         <% for(let i=0; i<post.ingredients.length; i++) {%>
             <li class="p-1 g-2"><%= post.ingredients[i] %></li>
             <% } %>
           </ul>
-          <h2>Directions</h2> <hr class="style1">
+          <h2>Installments</h2> <hr class="style1">
           <ol class="list-group list-group-numbered">
             <% for(let i=0; i<post.directions.length; i++) {%>
             <li class="p-1"><%= post.directions[i] %></li>
