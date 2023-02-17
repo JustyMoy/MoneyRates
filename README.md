@@ -2,11 +2,7 @@
 
 A calculator to to determine interest rates from loans for colleges and simple compound interest
 
-Command to Install npm install
-
-Command to run npm run dev
-
-Open http://localhost:3000 with your browser to see the result.
+https://rizzrates.cyclic.app/
 
 
 
